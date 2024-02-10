@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+  
+</head>
+<style>
+    #sapm{
+        margin: 10px;
+        padding: 10px;
+    }
+    #swift{
+        margin: 10px;
+        padding: 10px;
+    }
+</style>
+<body>
+    <h1>Calculator</h1>
+    <div id="sapm">
+        <input id="inp1" type="number" name="" placeholder="Enter the first number">
+        <input id="inp2" type="number" name="" placeholder="Enter the second number">
+    </div>
+    <div id="swift">
+        <button onclick="add()">Add</button>
+        <button onclick="subtract()">Subtract</button>
+        <button onclick="Multiply()">Multiply</button>
+        <button  onclick="Divide()">Divide</button>
+    </div>
+    <input id="display" type="number" name="" placeholder="Your Result">
+</body>
+<script>
+    
+    function add(){
+        let num1 = document.getElementById("inp1").value;
+        let num2 = document.getElementById("inp2").value;
+        let Result = eval(num1 + "+" + num2)
+        document.getElementById('display').value = Result;
+    }
+    function subtract(){
+        let num1 = document.getElementById("inp1").value;
+        let num2 = document.getElementById("inp2").value;
+        let Result = eval(num1 + "-" + num2)
+        document.getElementById('display').value = Result;
+    }
+    function Multiply(){
+        let num1 = document.getElementById("inp1").value;
+        let num2 = document.getElementById("inp2").value;
+        let Result = eval(num1 + "*" + num2)
+        document.getElementById('display').value = Result;
+    }
+    function Divide(){
+        let num1 = document.getElementById("inp1").value;
+        let num2 = document.getElementById("inp2").value;
+        let Result = eval(num1 + "/" + num2)
+        document.getElementById('display').value = Result;
+    }
+</script>
+</html>
